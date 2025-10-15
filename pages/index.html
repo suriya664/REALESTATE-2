@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="REALSTATE India - Find your dream property across India. Residential, Commercial, Land & Plots, PG/Hostels.">
+    <meta name="keywords" content="real estate, property, buy, sell, rent, India, Mumbai, Delhi, Bangalore">
+    <meta name="author" content="REALSTATE India">
+    
+    <title>REALSTATE India - Find Your Dream Property</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="../assets/img/favicon.ico">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/layout.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="../assets/css/dark.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">REAL<span>STATE</span></a>
+                
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="properties.html">Properties</a></li>
+                    <li><a href="agents.html">Agents</a></li>
+                    <li><a href="categories.html">Categories</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                
+                <div class="nav-actions">
+                    <a href="add-property.html" class="btn btn-outline-primary btn-sm d-none d-md-inline-block">
+                        <i class="fas fa-plus"></i> Add Property
+                    </a>
+                    <a href="login.html" class="btn btn-primary btn-sm">
+                        <i class="fas fa-user"></i> Login
+                    </a>
+                </div>
+                
+                <div class="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content text-center">
+                <h1 class="hero-title" data-aos="fade-up">Find Your Dream Property in India</h1>
+                <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="100">Discover thousands of properties across residential, commercial, and land options</p>
+                
+                <!-- Search Form -->
+                <div class="property-search-box" data-aos="fade-up" data-aos-delay="200">
+                    <form class="property-search-form">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-6">
+                                <div class="form-group">
+                                    <input type="text" name="location" class="form-control" placeholder="Location (City, Locality)">
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-6">
+                                <div class="form-group">
+                                    <select name="type" class="form-control">
+                                        <option value="">Property Type</option>
+                                        <option value="residential">Residential</option>
+                                        <option value="commercial">Commercial</option>
+                                        <option value="land">Land/Plot</option>
+                                        <option value="pg">PG/Hostel</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-6">
+                                <div class="form-group">
+                                    <select name="budget" class="form-control">
+                                        <option value="">Budget</option>
+                                        <option value="0-25">₹0 - 25 Lakh</option>
+                                        <option value="25-50">₹25 - 50 Lakh</option>
+                                        <option value="50-75">₹50 - 75 Lakh</option>
+                                        <option value="75-100">₹75 Lakh - 1 Cr</option>
+                                        <option value="100+">₹1 Cr+</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-6">
+                                <div class="form-group">
+                                    <select name="bedrooms" class="form-control">
+                                        <option value="">Bedrooms</option>
+                                        <option value="1">1 BHK</option>
+                                        <option value="2">2 BHK</option>
+                                        <option value="3">3 BHK</option>
+                                        <option value="4">4+ BHK</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-12">
+                                <button type="submit" class="btn btn-primary w-100">
+                                    <i class="fas fa-search"></i> Search Properties
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <style>
+            .hero-section {
+                background: linear-gradient(135deg, rgba(0, 120, 215, 0.9), rgba(0, 90, 158, 0.9)), 
+                            url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1920');
+                background-size: cover;
+                background-position: center;
+                padding: 150px 0 120px;
+                position: relative;
+                color: var(--white);
+            }
+            
+            .hero-overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(0, 0, 0, 0.3);
+            }
+            
+            .hero-content {
+                position: relative;
+                z-index: 1;
+            }
+            
+            .hero-title {
+                font-size: 3.5rem;
+                font-weight: 700;
+                color: var(--white);
+                margin-bottom: 20px;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.25rem;
+                color: var(--white);
+                opacity: 0.95;
+                margin-bottom: 40px;
+            }
+            
+            .property-search-box {
+                background: var(--white);
+                padding: 30px;
+                border-radius: var(--border-radius-lg);
+                box-shadow: var(--shadow-lg);
+                max-width: 1000px;
+                margin: 0 auto;
+            }
+            
+            .property-search-form .form-control {
+                height: 50px;
+            }
+            
+            .property-search-form .btn {
+                height: 50px;
+            }
+            
+            @media (max-width: 768px) {
+                .hero-section {
+                    padding: 100px 0 80px;
+                }
+                
+                .hero-title {
+                    font-size: 2rem;
+                }
+                
+                .property-search-box {
+                    padding: 20px;
+                }
+            }
+        </style>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Browse by Category</h2>
+                <p>Explore properties based on your requirements</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-3 col-md-6" data-aos="fade-up">
+                    <a href="properties.html?type=residential" class="category-card card">
+                        <div class="category-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h4>Residential</h4>
+                        <p>Apartments, Villas, Houses</p>
+                        <span class="property-count">1,245 Properties</span>
+                    </a>
+                </div>
+                
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <a href="properties.html?type=commercial" class="category-card card">
+                        <div class="category-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h4>Commercial</h4>
+                        <p>Offices, Shops, Showrooms</p>
+                        <span class="property-count">567 Properties</span>
+                    </a>
+                </div>
+                
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <a href="properties.html?type=land" class="category-card card">
+                        <div class="category-icon">
+                            <i class="fas fa-map"></i>
+                        </div>
+                        <h4>Land & Plots</h4>
+                        <p>Residential, Commercial, Agricultural</p>
+                        <span class="property-count">432 Properties</span>
+                    </a>
+                </div>
+                
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <a href="properties.html?type=pg" class="category-card card">
+                        <div class="category-icon">
+                            <i class="fas fa-bed"></i>
+                        </div>
+                        <h4>PG / Hostel</h4>
+                        <p>Paying Guest, Hostels</p>
+                        <span class="property-count">289 Properties</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <style>
+            .category-card {
+                text-align: center;
+                padding: 40px 20px;
+                margin-bottom: 30px;
+                transition: var(--transition);
+            }
+            
+            .category-card:hover {
+                transform: translateY(-10px);
+                box-shadow: var(--shadow-lg);
+            }
+            
+            .category-icon {
+                width: 80px;
+                height: 80px;
+                background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0 auto 20px;
+                font-size: 2rem;
+                color: var(--white);
+            }
+            
+            .category-card h4 {
+                margin-bottom: 10px;
+                color: var(--dark);
+            }
+            
+            .category-card p {
+                color: var(--gray);
+                margin-bottom: 15px;
+            }
+            
+            .property-count {
+                display: inline-block;
+                padding: 5px 15px;
+                background: var(--off-white);
+                border-radius: 15px;
+                font-size: 14px;
+                color: var(--primary-color);
+                font-weight: 600;
+            }
+        </style>
+    </section>
+
+    <!-- Featured Properties -->
+    <section class="featured-properties bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>Featured Properties</h2>
+                <p>Hand-picked properties for you</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up">
+                    <div class="property-card card">
+                        <div class="property-card-img">
+                            <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800" alt="Modern Villa">
+                            <span class="property-badge featured">Featured</span>
+                            <span class="property-price">₹1.25 Cr</span>
+                            <button class="favorite-btn" data-property-id="1">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                        <div class="property-details">
+                            <h3 class="property-title">Luxury Villa in Gurugram</h3>
+                            <p class="property-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                Sector 45, Gurugram, Haryana
+                            </p>
+                            <div class="property-meta">
+                                <span><i class="fas fa-bed"></i> 4 Beds</span>
+                                <span><i class="fas fa-bath"></i> 3 Baths</span>
+                                <span><i class="fas fa-ruler-combined"></i> 2,400 sq.ft</span>
+                            </div>
+                            <a href="property-details.html?id=1" class="btn btn-primary w-100 mt-3">
+                                View Details
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="property-card card">
+                        <div class="property-card-img">
+                            <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800" alt="Modern Apartment">
+                            <span class="property-badge sale">For Sale</span>
+                            <span class="property-price">₹85 Lakh</span>
+                            <button class="favorite-btn" data-property-id="2">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                        <div class="property-details">
+                            <h3 class="property-title">3 BHK Apartment</h3>
+                            <p class="property-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                Whitefield, Bangalore, Karnataka
+                            </p>
+                            <div class="property-meta">
+                                <span><i class="fas fa-bed"></i> 3 Beds</span>
+                                <span><i class="fas fa-bath"></i> 2 Baths</span>
+                                <span><i class="fas fa-ruler-combined"></i> 1,450 sq.ft</span>
+                            </div>
+                            <a href="property-details.html?id=2" class="btn btn-primary w-100 mt-3">
+                                View Details
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="property-card card">
+                        <div class="property-card-img">
+                            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800" alt="Commercial Space">
+                            <span class="property-badge rent">For Rent</span>
+                            <span class="property-price">₹45,000/mo</span>
+                            <button class="favorite-btn" data-property-id="3">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                        <div class="property-details">
+                            <h3 class="property-title">Commercial Office Space</h3>
+                            <p class="property-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                Andheri East, Mumbai, Maharashtra
+                            </p>
+                            <div class="property-meta">
+                                <span><i class="fas fa-briefcase"></i> Office</span>
+                                <span><i class="fas fa-users"></i> 50 Seats</span>
+                                <span><i class="fas fa-ruler-combined"></i> 1,800 sq.ft</span>
+                            </div>
+                            <a href="property-details.html?id=3" class="btn btn-primary w-100 mt-3">
+                                View Details
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-4">
+                <a href="properties.html" class="btn btn-outline-primary btn-lg">
+                    View All Properties <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+        
+        <style>
+            .favorite-btn {
+                position: absolute;
+                top: 15px;
+                right: 15px;
+                width: 40px;
+                height: 40px;
+                background: var(--white);
+                border: none;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                transition: var(--transition);
+                z-index: 2;
+            }
+            
+            .favorite-btn:hover,
+            .favorite-btn.active {
+                background: var(--danger);
+                color: var(--white);
+            }
+            
+            .favorite-btn.active i {
+                font-weight: 900;
+            }
+        </style>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 text-center" data-aos="fade-up">
+                    <div class="stat-box">
+                        <i class="fas fa-building stat-icon"></i>
+                        <h3 class="counter" data-target="2534">0</h3>
+                        <p>Properties Listed</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="stat-box">
+                        <i class="fas fa-users stat-icon"></i>
+                        <h3 class="counter" data-target="1248">0</h3>
+                        <p>Happy Customers</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="stat-box">
+                        <i class="fas fa-user-tie stat-icon"></i>
+                        <h3 class="counter" data-target="156">0</h3>
+                        <p>Expert Agents</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="stat-box">
+                        <i class="fas fa-award stat-icon"></i>
+                        <h3 class="counter" data-target="12">0</h3>
+                        <p>Years Experience</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <style>
+            .stats-section {
+                background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+                padding: 80px 0;
+                color: var(--white);
+            }
+            
+            .stat-box {
+                padding: 20px;
+            }
+            
+            .stat-icon {
+                font-size: 3rem;
+                color: var(--secondary-color);
+                margin-bottom: 15px;
+            }
+            
+            .stat-box h3 {
+                font-size: 2.5rem;
+                font-weight: 700;
+                color: var(--white);
+                margin-bottom: 10px;
+            }
+            
+            .stat-box p {
+                font-size: 1.125rem;
+                color: var(--white);
+                opacity: 0.9;
+            }
+        </style>
+    </section>
+
+    <!-- Popular Locations -->
+    <section class="locations-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Popular Locations</h2>
+                <p>Explore properties in India's top cities</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up">
+                    <a href="properties.html?location=mumbai" class="location-card">
+                        <img src="https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=800" alt="Mumbai">
+                        <div class="location-overlay">
+                            <h3>Mumbai</h3>
+                            <p>450+ Properties</p>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <a href="properties.html?location=delhi" class="location-card">
+                        <img src="https://images.unsplash.com/photo-1587474260584-136574528ed5?w=800" alt="Delhi">
+                        <div class="location-overlay">
+                            <h3>Delhi NCR</h3>
+                            <p>380+ Properties</p>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <a href="properties.html?location=bangalore" class="location-card">
+                        <img src="https://images.unsplash.com/photo-1596176530529-78163a4f7af2?w=800" alt="Bangalore">
+                        <div class="location-overlay">
+                            <h3>Bangalore</h3>
+                            <p>520+ Properties</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <style>
+            .location-card {
+                position: relative;
+                display: block;
+                border-radius: var(--border-radius-lg);
+                overflow: hidden;
+                margin-bottom: 30px;
+                height: 300px;
+            }
+            
+            .location-card img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: var(--transition);
+            }
+            
+            .location-card:hover img {
+                transform: scale(1.1);
+            }
+            
+            .location-overlay {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+                padding: 30px;
+                color: var(--white);
+            }
+            
+            .location-overlay h3 {
+                font-size: 1.75rem;
+                color: var(--white);
+                margin-bottom: 5px;
+            }
+            
+            .location-overlay p {
+                color: var(--white);
+                opacity: 0.9;
+            }
+        </style>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="footer-widget">
+                            <h4>REALSTATE India</h4>
+                            <p>Your trusted partner in finding the perfect property. We connect buyers, sellers, and renters across India.</p>
+                            <div class="social-links">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-2 col-md-6">
+                        <div class="footer-widget">
+                            <h4>Quick Links</h4>
+                            <ul>
+                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="properties.html">Properties</a></li>
+                                <li><a href="agents.html">Agents</a></li>
+                                <li><a href="blog.html">Blog</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-2 col-md-6">
+                        <div class="footer-widget">
+                            <h4>Categories</h4>
+                            <ul>
+                                <li><a href="properties.html?type=residential">Residential</a></li>
+                                <li><a href="properties.html?type=commercial">Commercial</a></li>
+                                <li><a href="properties.html?type=land">Land & Plots</a></li>
+                                <li><a href="properties.html?type=pg">PG / Hostel</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4 col-md-6">
+                        <div class="footer-widget">
+                            <h4>Contact Us</h4>
+                            <p><i class="fas fa-map-marker-alt"></i> 5th Floor, Infinity Tower, Sector 62, Gurugram, Haryana</p>
+                            <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+                            <p><i class="fas fa-envelope"></i> info@realstate.in</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 REALSTATE India Pvt. Ltd. All rights reserved. | <a href="privacy-policy.html">Privacy Policy</a> | <a href="terms.html">Terms & Conditions</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top"><i class="fas fa-arrow-up"></i></button>
+    
+    <!-- Theme Toggle -->
+    <button class="theme-toggle"><i class="fas fa-moon"></i></button>
+
+    <!-- Scripts -->
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/ajax.js"></script>
+    <script src="../assets/js/plugins.js"></script>
+    
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Properties - REALSTATE India</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/layout.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="../assets/css/dark.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">REAL<span>STATE</span></a>
+                
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="properties.html" class="active">Properties</a></li>
+                    <li><a href="agents.html">Agents</a></li>
+                    <li><a href="categories.html">Categories</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                
+                <div class="nav-actions">
+                    <a href="add-property.html" class="btn btn-outline-primary btn-sm d-none d-md-inline-block">
+                        <i class="fas fa-plus"></i> Add Property
+                    </a>
+                    <a href="login.html" class="btn btn-primary btn-sm">
+                        <i class="fas fa-user"></i> Login
+                    </a>
+                </div>
+                
+                <div class="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <div class="page-hero">
+        <div class="container">
+            <h1>Find Your Perfect Property</h1>
+            <ul class="breadcrumb">
+                <li><a href="index.html">Home</a></li>
+                <li>/</li>
+                <li>Properties</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Properties Section -->
+    <section class="properties-listing">
+        <div class="container">
+            <div class="row">
+                <!-- Sidebar -->
+                <div class="col-lg-3">
+                    <div class="sidebar">
+                        <!-- Search Widget -->
+                        <div class="sidebar-widget">
+                            <h4>Search Properties</h4>
+                            <form class="property-filter-form">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Search by location">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label class="form-label">Property Type</label>
+                                    <select class="form-control">
+                                        <option value="">All Types</option>
+                                        <option value="residential">Residential</option>
+                                        <option value="commercial">Commercial</option>
+                                        <option value="land">Land/Plot</option>
+                                        <option value="pg">PG/Hostel</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label class="form-label">Purpose</label>
+                                    <select class="form-control">
+                                        <option value="">Buy/Rent</option>
+                                        <option value="sale">For Sale</option>
+                                        <option value="rent">For Rent</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label class="form-label">Bedrooms</label>
+                                    <select class="form-control">
+                                        <option value="">Any</option>
+                                        <option value="1">1 BHK</option>
+                                        <option value="2">2 BHK</option>
+                                        <option value="3">3 BHK</option>
+                                        <option value="4">4+ BHK</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label class="form-label">Price Range</label>
+                                    <div class="price-slider">
+                                        <input type="range" class="form-control min-price" min="0" max="10000000" step="100000" value="0">
+                                        <input type="range" class="form-control max-price" min="0" max="10000000" step="100000" value="10000000">
+                                        <div class="price-values d-flex justify-content-between mt-2">
+                                            <span class="min-value">₹0</span>
+                                            <span class="max-value">₹1 Cr</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label class="form-label">Area (sq.ft)</label>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <input type="number" class="form-control" placeholder="Min">
+                                        </div>
+                                        <div class="col-6">
+                                            <input type="number" class="form-control" placeholder="Max">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <button type="submit" class="btn btn-primary w-100">Apply Filters</button>
+                                <button type="reset" class="btn btn-outline-primary w-100 mt-2">Reset</button>
+                            </form>
+                        </div>
+                        
+                        <!-- Featured Properties Widget -->
+                        <div class="sidebar-widget">
+                            <h4>Featured Properties</h4>
+                            <div class="featured-property-item">
+                                <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=400" alt="Property">
+                                <div>
+                                    <h6>Luxury Villa</h6>
+                                    <p class="text-primary">₹1.25 Cr</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Properties Grid -->
+                <div class="col-lg-9">
+                    <!-- Toolbar -->
+                    <div class="properties-toolbar">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="results-count">
+                                <p>Showing <strong>1-9</strong> of <strong>142</strong> properties</p>
+                            </div>
+                            <div class="view-options">
+                                <button class="grid-view-btn active" title="Grid View">
+                                    <i class="fas fa-th"></i>
+                                </button>
+                                <button class="list-view-btn" title="List View">
+                                    <i class="fas fa-list"></i>
+                                </button>
+                                <select class="form-control sort-select">
+                                    <option>Sort by: Latest</option>
+                                    <option>Price: Low to High</option>
+                                    <option>Price: High to Low</option>
+                                    <option>Area: Large to Small</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Properties Grid -->
+                    <div class="row property-grid grid-view">
+                        <!-- Property 1 -->
+                        <div class="col-lg-4 col-md-6 property-item" data-category="residential">
+                            <div class="property-card card">
+                                <div class="property-card-img">
+                                    <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800" alt="Villa">
+                                    <span class="property-badge featured">Featured</span>
+                                    <span class="property-price">₹1.25 Cr</span>
+                                    <button class="favorite-btn" data-property-id="1">
+                                        <i class="far fa-heart"></i>
+                                    </button>
+                                </div>
+                                <div class="property-details">
+                                    <h3 class="property-title">Luxury Villa in Gurugram</h3>
+                                    <p class="property-location">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        Sector 45, Gurugram, Haryana
+                                    </p>
+                                    <div class="property-meta">
+                                        <span><i class="fas fa-bed"></i> 4 Beds</span>
+                                        <span><i class="fas fa-bath"></i> 3 Baths</span>
+                                        <span><i class="fas fa-ruler-combined"></i> 2,400 sq.ft</span>
+                                    </div>
+                                    <a href="property-details.html?id=1" class="btn btn-primary w-100 mt-3">
+                                        View Details
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Property 2 -->
+                        <div class="col-lg-4 col-md-6 property-item" data-category="residential">
+                            <div class="property-card card">
+                                <div class="property-card-img">
+                                    <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800" alt="Apartment">
+                                    <span class="property-badge sale">For Sale</span>
+                                    <span class="property-price">₹85 Lakh</span>
+                                    <button class="favorite-btn" data-property-id="2">
+                                        <i class="far fa-heart"></i>
+                                    </button>
+                                </div>
+                                <div class="property-details">
+                                    <h3 class="property-title">3 BHK Apartment</h3>
+                                    <p class="property-location">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        Whitefield, Bangalore, Karnataka
+                                    </p>
+                                    <div class="property-meta">
+                                        <span><i class="fas fa-bed"></i> 3 Beds</span>
+                                        <span><i class="fas fa-bath"></i> 2 Baths</span>
+                                        <span><i class="fas fa-ruler-combined"></i> 1,450 sq.ft</span>
+                                    </div>
+                                    <a href="property-details.html?id=2" class="btn btn-primary w-100 mt-3">
+                                        View Details
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Property 3 -->
+                        <div class="col-lg-4 col-md-6 property-item" data-category="commercial">
+                            <div class="property-card card">
+                                <div class="property-card-img">
+                                    <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800" alt="Office">
+                                    <span class="property-badge rent">For Rent</span>
+                                    <span class="property-price">₹45,000/mo</span>
+                                    <button class="favorite-btn" data-property-id="3">
+                                        <i class="far fa-heart"></i>
+                                    </button>
+                                </div>
+                                <div class="property-details">
+                                    <h3 class="property-title">Commercial Office Space</h3>
+                                    <p class="property-location">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        Andheri East, Mumbai, Maharashtra
+                                    </p>
+                                    <div class="property-meta">
+                                        <span><i class="fas fa-briefcase"></i> Office</span>
+                                        <span><i class="fas fa-users"></i> 50 Seats</span>
+                                        <span><i class="fas fa-ruler-combined"></i> 1,800 sq.ft</span>
+                                    </div>
+                                    <a href="property-details.html?id=3" class="btn btn-primary w-100 mt-3">
+                                        View Details
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Property 4 -->
+                        <div class="col-lg-4 col-md-6 property-item" data-category="residential">
+                            <div class="property-card card">
+                                <div class="property-card-img">
+                                    <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800" alt="House">
+                                    <span class="property-badge sale">For Sale</span>
+                                    <span class="property-price">₹95 Lakh</span>
+                                    <button class="favorite-btn" data-property-id="4">
+                                        <i class="far fa-heart"></i>
+                                    </button>
+                                </div>
+                                <div class="property-details">
+                                    <h3 class="property-title">Modern Family House</h3>
+                                    <p class="property-location">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        Hebbal, Bangalore, Karnataka
+                                    </p>
+                                    <div class="property-meta">
+                                        <span><i class="fas fa-bed"></i> 3 Beds</span>
+                                        <span><i class="fas fa-bath"></i> 2 Baths</span>
+                                        <span><i class="fas fa-ruler-combined"></i> 1,600 sq.ft</span>
+                                    </div>
+                                    <a href="property-details.html?id=4" class="btn btn-primary w-100 mt-3">
+                                        View Details
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Property 5 -->
+                        <div class="col-lg-4 col-md-6 property-item" data-category="land">
+                            <div class="property-card card">
+                                <div class="property-card-img">
+                                    <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800" alt="Land">
+                                    <span class="property-badge sale">For Sale</span>
+                                    <span class="property-price">₹55 Lakh</span>
+                                    <button class="favorite-btn" data-property-id="5">
+                                        <i class="far fa-heart"></i>
+                                    </button>
+                                </div>
+                                <div class="property-details">
+                                    <h3 class="property-title">Residential Plot</h3>
+                                    <p class="property-location">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        Sohna Road, Gurugram, Haryana
+                                    </p>
+                                    <div class="property-meta">
+                                        <span><i class="fas fa-map"></i> Plot</span>
+                                        <span><i class="fas fa-ruler-combined"></i> 2,000 sq.ft</span>
+                                        <span><i class="fas fa-check"></i> Clear Title</span>
+                                    </div>
+                                    <a href="property-details.html?id=5" class="btn btn-primary w-100 mt-3">
+                                        View Details
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Property 6 -->
+                        <div class="col-lg-4 col-md-6 property-item" data-category="pg">
+                            <div class="property-card card">
+                                <div class="property-card-img">
+                                    <img src="https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=800" alt="PG">
+                                    <span class="property-badge rent">For Rent</span>
+                                    <span class="property-price">₹12,000/mo</span>
+                                    <button class="favorite-btn" data-property-id="6">
+                                        <i class="far fa-heart"></i>
+                                    </button>
+                                </div>
+                                <div class="property-details">
+                                    <h3 class="property-title">Premium PG for Men</h3>
+                                    <p class="property-location">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        Koramangala, Bangalore, Karnataka
+                                    </p>
+                                    <div class="property-meta">
+                                        <span><i class="fas fa-bed"></i> Single/Double</span>
+                                        <span><i class="fas fa-utensils"></i> Food</span>
+                                        <span><i class="fas fa-wifi"></i> WiFi</span>
+                                    </div>
+                                    <a href="property-details.html?id=6" class="btn btn-primary w-100 mt-3">
+                                        View Details
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pagination -->
+                    <div class="pagination-wrapper">
+                        <ul class="pagination">
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#"><i class="fas fa-chevron-left"></i></a>
+                            </li>
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item"><a class="page-link" href="#">4</a></li>
+                            <li class="page-item"><a class="page-link" href="#">5</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#"><i class="fas fa-chevron-right"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="footer-widget">
+                            <h4>REALSTATE India</h4>
+                            <p>Your trusted partner in finding the perfect property.</p>
+                            <div class="social-links">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-2 col-md-6">
+                        <div class="footer-widget">
+                            <h4>Quick Links</h4>
+                            <ul>
+                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="properties.html">Properties</a></li>
+                                <li><a href="agents.html">Agents</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-2 col-md-6">
+                        <div class="footer-widget">
+                            <h4>Categories</h4>
+                            <ul>
+                                <li><a href="properties.html?type=residential">Residential</a></li>
+                                <li><a href="properties.html?type=commercial">Commercial</a></li>
+                                <li><a href="properties.html?type=land">Land & Plots</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4 col-md-6">
+                        <div class="footer-widget">
+                            <h4>Contact</h4>
+                            <p><i class="fas fa-map-marker-alt"></i> Sector 62, Gurugram, Haryana</p>
+                            <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+                            <p><i class="fas fa-envelope"></i> info@realstate.in</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 REALSTATE India Pvt. Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top"><i class="fas fa-arrow-up"></i></button>
+    
+    <!-- Theme Toggle -->
+    <button class="theme-toggle"><i class="fas fa-moon"></i></button>
+
+    <style>
+        .properties-toolbar {
+            background: var(--white);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-sm);
+            margin-bottom: 30px;
+        }
+        
+        .view-options {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        
+        .grid-view-btn,
+        .list-view-btn {
+            width: 40px;
+            height: 40px;
+            border: 1px solid var(--gray-light);
+            background: var(--white);
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .grid-view-btn.active,
+        .list-view-btn.active {
+            background: var(--primary-color);
+            color: var(--white);
+            border-color: var(--primary-color);
+        }
+        
+        .sort-select {
+            width: 200px;
+            height: 40px;
+        }
+        
+        .pagination-wrapper {
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+        }
+        
+        .pagination {
+            display: flex;
+            gap: 5px;
+            list-style: none;
+            padding: 0;
+        }
+        
+        .page-item {
+            margin: 0;
+        }
+        
+        .page-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border: 1px solid var(--gray-light);
+            border-radius: var(--border-radius);
+            color: var(--dark);
+            transition: var(--transition);
+        }
+        
+        .page-item.active .page-link {
+            background: var(--primary-color);
+            color: var(--white);
+            border-color: var(--primary-color);
+        }
+        
+        .page-link:hover {
+            background: var(--primary-light);
+            color: var(--white);
+            border-color: var(--primary-light);
+        }
+        
+        .page-item.disabled .page-link {
+            opacity: 0.5;
+            pointer-events: none;
+        }
+        
+        .featured-property-item {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid var(--gray-light);
+        }
+        
+        .featured-property-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        
+        .featured-property-item img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: var(--border-radius);
+        }
+        
+        .featured-property-item h6 {
+            font-size: 0.875rem;
+            margin-bottom: 5px;
+        }
+        
+        .featured-property-item p {
+            font-size: 0.875rem;
+            margin: 0;
+        }
+    </style>
+
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/ajax.js"></script>
+</body>
+</html>
+

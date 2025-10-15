@@ -1,0 +1,293 @@
+<!-- ================================================
+     Real Estate Template - Dashboard Sidebar
+     Version: 1.0
+     ================================================ -->
+
+<aside class="dashboard-sidebar">
+    <div class="sidebar-header">
+        <div class="user-profile">
+            <div class="user-avatar">
+                <img src="../assets/img/agents/default-avatar.jpg" alt="User Avatar">
+            </div>
+            <div class="user-info">
+                <h5 class="user-name">Welcome User</h5>
+                <p class="user-email">user@realstate.in</p>
+            </div>
+        </div>
+    </div>
+
+    <nav class="sidebar-nav">
+        <ul class="nav-list">
+            <li class="nav-item">
+                <a href="dashboard.html" class="nav-link active">
+                    <i class="fas fa-th-large"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="dashboard.html#my-properties" class="nav-link">
+                    <i class="fas fa-home"></i>
+                    <span>My Properties</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="add-property.html" class="nav-link">
+                    <i class="fas fa-plus-circle"></i>
+                    <span>Add Property</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="dashboard.html#favorites" class="nav-link">
+                    <i class="fas fa-heart"></i>
+                    <span>Saved Properties</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="dashboard.html#messages" class="nav-link">
+                    <i class="fas fa-envelope"></i>
+                    <span>Messages</span>
+                    <span class="badge badge-danger">5</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="dashboard.html#inquiries" class="nav-link">
+                    <i class="fas fa-comments"></i>
+                    <span>Inquiries</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="dashboard.html#profile" class="nav-link">
+                    <i class="fas fa-user-cog"></i>
+                    <span>Profile Settings</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" onclick="logout()" class="nav-link">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="sidebar-footer">
+        <div class="upgrade-box">
+            <i class="fas fa-crown"></i>
+            <h6>Upgrade to Premium</h6>
+            <p>Get unlimited property listings</p>
+            <a href="pricing.html" class="btn btn-primary btn-sm w-100">Upgrade Now</a>
+        </div>
+    </div>
+</aside>
+
+<!-- Admin Sidebar (Alternative) -->
+<aside class="dashboard-sidebar admin-sidebar" style="display: none;">
+    <div class="sidebar-header">
+        <div class="user-profile">
+            <div class="user-avatar">
+                <img src="../assets/img/agents/admin-avatar.jpg" alt="Admin Avatar">
+            </div>
+            <div class="user-info">
+                <h5 class="user-name">Admin</h5>
+                <p class="user-email">admin@smartproperty.in</p>
+            </div>
+        </div>
+    </div>
+
+    <nav class="sidebar-nav">
+        <ul class="nav-list">
+            <li class="nav-item">
+                <a href="admin-dashboard.html" class="nav-link active">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="admin-dashboard.html#properties" class="nav-link">
+                    <i class="fas fa-building"></i>
+                    <span>All Properties</span>
+                    <span class="badge badge-primary">142</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="admin-dashboard.html#users" class="nav-link">
+                    <i class="fas fa-users"></i>
+                    <span>Users</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="admin-dashboard.html#agents" class="nav-link">
+                    <i class="fas fa-user-tie"></i>
+                    <span>Agents</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="admin-dashboard.html#inquiries" class="nav-link">
+                    <i class="fas fa-question-circle"></i>
+                    <span>Inquiries</span>
+                    <span class="badge badge-warning">12</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="admin-dashboard.html#analytics" class="nav-link">
+                    <i class="fas fa-chart-bar"></i>
+                    <span>Analytics</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="admin-dashboard.html#settings" class="nav-link">
+                    <i class="fas fa-cog"></i>
+                    <span>Settings</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" onclick="logout()" class="nav-link">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</aside>
+
+<!-- Sidebar Styles -->
+<style>
+.dashboard-sidebar {
+    width: 280px;
+    background: var(--white);
+    box-shadow: var(--shadow);
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+    z-index: 1000;
+    transition: var(--transition);
+}
+
+.sidebar-header {
+    padding: 30px 20px;
+    border-bottom: 1px solid var(--gray-light);
+}
+
+.user-profile {
+    text-align: center;
+}
+
+.user-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 15px;
+    border: 3px solid var(--primary-light);
+}
+
+.user-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.user-info h5 {
+    font-size: 1.125rem;
+    margin-bottom: 5px;
+    color: var(--dark);
+}
+
+.user-info p {
+    font-size: 0.875rem;
+    color: var(--gray);
+    margin: 0;
+}
+
+.sidebar-nav {
+    padding: 20px 0;
+}
+
+.nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-item {
+    margin-bottom: 5px;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    padding: 12px 25px;
+    color: var(--gray-dark);
+    transition: var(--transition);
+    position: relative;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--primary-color);
+    background: rgba(0, 120, 215, 0.08);
+}
+
+.nav-link i {
+    width: 20px;
+    margin-right: 15px;
+    font-size: 1.125rem;
+}
+
+.nav-link .badge {
+    margin-left: auto;
+}
+
+.sidebar-footer {
+    padding: 20px;
+    border-top: 1px solid var(--gray-light);
+}
+
+.upgrade-box {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    padding: 20px;
+    border-radius: var(--border-radius);
+    text-align: center;
+    color: var(--white);
+}
+
+.upgrade-box i {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: var(--secondary-color);
+}
+
+.upgrade-box h6 {
+    color: var(--white);
+    margin-bottom: 5px;
+}
+
+.upgrade-box p {
+    font-size: 0.875rem;
+    margin-bottom: 15px;
+    opacity: 0.9;
+}
+
+.upgrade-box .btn {
+    background: var(--white);
+    color: var(--primary-color);
+}
+
+.upgrade-box .btn:hover {
+    background: var(--secondary-color);
+    color: var(--white);
+}
+
+@media (max-width: 992px) {
+    .dashboard-sidebar {
+        transform: translateX(-100%);
+    }
+    
+    .dashboard-sidebar.active {
+        transform: translateX(0);
+    }
+}
+</style>
+

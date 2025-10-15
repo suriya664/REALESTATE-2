@@ -1,0 +1,351 @@
+/* ================================================
+   Real Estate Template - Responsive Styles
+   Version: 1.0
+   ================================================ */
+
+/* ================ Tablet - 992px ================ */
+@media (max-width: 992px) {
+    /* Grid */
+    .col-md-1 { flex: 0 0 8.333333%; max-width: 8.333333%; }
+    .col-md-2 { flex: 0 0 16.666667%; max-width: 16.666667%; }
+    .col-md-3 { flex: 0 0 25%; max-width: 25%; }
+    .col-md-4 { flex: 0 0 33.333333%; max-width: 33.333333%; }
+    .col-md-5 { flex: 0 0 41.666667%; max-width: 41.666667%; }
+    .col-md-6 { flex: 0 0 50%; max-width: 50%; }
+    .col-md-7 { flex: 0 0 58.333333%; max-width: 58.333333%; }
+    .col-md-8 { flex: 0 0 66.666667%; max-width: 66.666667%; }
+    .col-md-9 { flex: 0 0 75%; max-width: 75%; }
+    .col-md-10 { flex: 0 0 83.333333%; max-width: 83.333333%; }
+    .col-md-11 { flex: 0 0 91.666667%; max-width: 91.666667%; }
+    .col-md-12 { flex: 0 0 100%; max-width: 100%; }
+    
+    /* Typography */
+    h1 { font-size: 2.25rem; }
+    h2 { font-size: 2rem; }
+    
+    /* Section */
+    section {
+        padding: 60px 0;
+    }
+    
+    /* Navigation */
+    .nav-menu {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 280px;
+        height: calc(100vh - 70px);
+        background: var(--white);
+        flex-direction: column;
+        padding: 30px;
+        box-shadow: var(--shadow-lg);
+        transition: var(--transition);
+        gap: 0;
+    }
+    
+    .nav-menu.active {
+        left: 0;
+    }
+    
+    .nav-menu li {
+        width: 100%;
+        border-bottom: 1px solid var(--gray-light);
+    }
+    
+    .nav-menu li a {
+        display: block;
+        padding: 15px 0;
+    }
+    
+    .menu-toggle {
+        display: flex;
+    }
+    
+    .menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(8px, 8px);
+    }
+    
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -7px);
+    }
+}
+
+/* ================ Mobile Landscape - 768px ================ */
+@media (max-width: 768px) {
+    /* Grid */
+    .col-sm-1 { flex: 0 0 8.333333%; max-width: 8.333333%; }
+    .col-sm-2 { flex: 0 0 16.666667%; max-width: 16.666667%; }
+    .col-sm-3 { flex: 0 0 25%; max-width: 25%; }
+    .col-sm-4 { flex: 0 0 33.333333%; max-width: 33.333333%; }
+    .col-sm-5 { flex: 0 0 41.666667%; max-width: 41.666667%; }
+    .col-sm-6 { flex: 0 0 50%; max-width: 50%; }
+    .col-sm-7 { flex: 0 0 58.333333%; max-width: 58.333333%; }
+    .col-sm-8 { flex: 0 0 66.666667%; max-width: 66.666667%; }
+    .col-sm-9 { flex: 0 0 75%; max-width: 75%; }
+    .col-sm-10 { flex: 0 0 83.333333%; max-width: 83.333333%; }
+    .col-sm-11 { flex: 0 0 91.666667%; max-width: 91.666667%; }
+    .col-sm-12 { flex: 0 0 100%; max-width: 100%; }
+    
+    /* Typography */
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.75rem; }
+    h3 { font-size: 1.5rem; }
+    
+    /* Section */
+    section {
+        padding: 40px 0;
+    }
+    
+    .section-title h2 {
+        font-size: 1.875rem;
+    }
+    
+    /* Property Card */
+    .property-card-img {
+        height: 220px;
+    }
+    
+    .property-meta {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    
+    /* Page Hero */
+    .page-hero {
+        padding: 60px 0;
+    }
+    
+    .page-hero h1 {
+        font-size: 2rem;
+    }
+    
+    /* Buttons */
+    .btn-lg {
+        padding: 12px 30px;
+        font-size: 16px;
+    }
+    
+    /* Cards */
+    .card-body {
+        padding: 20px;
+    }
+    
+    /* Display Utilities */
+    .d-sm-none { display: none !important; }
+    .d-sm-block { display: block !important; }
+    .d-sm-flex { display: flex !important; }
+    
+    /* Text Alignment */
+    .text-sm-center { text-align: center !important; }
+    .text-sm-left { text-align: left !important; }
+    
+    /* Spacing */
+    .mt-sm-0 { margin-top: 0 !important; }
+    .mt-sm-3 { margin-top: 1rem !important; }
+    .mb-sm-3 { margin-bottom: 1rem !important; }
+}
+
+/* ================ Mobile Portrait - 576px ================ */
+@media (max-width: 576px) {
+    /* Container */
+    .container {
+        padding: 0 20px;
+    }
+    
+    /* Grid */
+    .col-xs-12 { flex: 0 0 100%; max-width: 100%; }
+    
+    /* Typography */
+    body {
+        font-size: 15px;
+    }
+    
+    h1 { font-size: 1.75rem; }
+    h2 { font-size: 1.5rem; }
+    h3 { font-size: 1.25rem; }
+    h4 { font-size: 1.125rem; }
+    
+    /* Buttons */
+    .btn {
+        padding: 10px 20px;
+        font-size: 15px;
+    }
+    
+    .btn-lg {
+        padding: 12px 25px;
+        font-size: 16px;
+    }
+    
+    /* Section */
+    section {
+        padding: 30px 0;
+    }
+    
+    .section-title {
+        margin-bottom: 30px;
+    }
+    
+    .section-title h2 {
+        font-size: 1.5rem;
+    }
+    
+    .section-title p {
+        font-size: 1rem;
+    }
+    
+    /* Property Card */
+    .property-card-img {
+        height: 200px;
+    }
+    
+    .property-price {
+        font-size: 16px;
+        padding: 6px 12px;
+    }
+    
+    .property-title {
+        font-size: 1.125rem;
+    }
+    
+    .property-meta {
+        gap: 8px;
+        font-size: 13px;
+    }
+    
+    /* Page Hero */
+    .page-hero {
+        padding: 40px 0;
+    }
+    
+    .page-hero h1 {
+        font-size: 1.75rem;
+    }
+    
+    .breadcrumb {
+        font-size: 14px;
+    }
+    
+    /* Logo */
+    .logo {
+        font-size: 1.5rem;
+    }
+    
+    /* Footer */
+    .footer {
+        padding: 40px 0 15px;
+    }
+    
+    .footer-widget {
+        text-align: center;
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+    
+    /* Forms */
+    .form-control {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+    
+    /* Sidebar */
+    .sidebar {
+        padding: 20px;
+        position: relative;
+        top: 0;
+    }
+    
+    /* Cards */
+    .card-body {
+        padding: 15px;
+    }
+    
+    /* Agent Card */
+    .agent-img {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .agent-name {
+        font-size: 1.125rem;
+    }
+    
+    /* Display Utilities */
+    .d-xs-none { display: none !important; }
+    .d-xs-block { display: block !important; }
+    
+    /* Spacing */
+    .px-xs-0 { padding-left: 0 !important; padding-right: 0 !important; }
+}
+
+/* ================ Extra Small - 400px ================ */
+@media (max-width: 400px) {
+    h1 { font-size: 1.5rem; }
+    h2 { font-size: 1.375rem; }
+    
+    .property-card-img {
+        height: 180px;
+    }
+    
+    .page-hero h1 {
+        font-size: 1.5rem;
+    }
+    
+    .logo {
+        font-size: 1.25rem;
+    }
+}
+
+/* ================ Print Styles ================ */
+@media print {
+    .header,
+    .footer,
+    .sidebar,
+    .nav-menu,
+    .menu-toggle,
+    .btn {
+        display: none !important;
+    }
+    
+    body {
+        font-size: 12pt;
+        color: #000;
+    }
+    
+    a {
+        text-decoration: underline;
+    }
+    
+    .container {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+/* ================ Landscape Orientation ================ */
+@media (max-width: 768px) and (orientation: landscape) {
+    .page-hero {
+        padding: 30px 0;
+    }
+    
+    section {
+        padding: 30px 0;
+    }
+}
+
+/* ================ High Resolution Displays ================ */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    /* Optimizations for retina displays */
+    .logo,
+    .property-title,
+    .section-title h2 {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+}
+
